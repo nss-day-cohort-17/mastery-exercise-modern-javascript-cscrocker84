@@ -34,10 +34,43 @@
          </div>
       </section>
 
-<!-- buttons for the 3 types of bots; Daleks, Cybermen, Imperial Probe Droid -->
+       <!-- robot selection page -->
+
+       <section id="selectBots">
+         <div>
+            <h1 class="text-center">Select Baddies to Do Battle</h1>
+            <hr>
+         </div>
+
+         <div class="container row">
+         <!-- robot 1 selection -->
+            <div class="col-md-6">
+               <h2 id="selectBot1" class="text-center">
+               </h2><br>
+
+<!-- dropdowns for the 3 types of bots; Daleks, Cybermen, Imperial Probe Droid -->
 <!-- Each has 2 classes; dalek- cult of skaro or supreme council
      					cybermen; cyber leader or cyber soldier
      					probe droid; weak or even weaker -->
+
+     	  <!-- robot 1 options -->
+
+     	  <div class="selectBots text-center">
+                  <select id="select1">
+                     <option selected></option>
+                     <option value="Daleks1" disabled>   -- Daleks --   </option>
+                     <option value="Scarro">Cult of Scarro</option>
+                     <option value="Council">Supreme Council</option>
+                     <option value="Cybermen1" disabled>   -- Cybermen --   </option>
+                     <option value="Soldier">Cyber Soldier</option>
+                     <option value="Leader">Cyber Leader</option>
+                     <option value="Probe1" disabled>   -- Probe Droids --   </option>
+                     <option value="Weak">Weak Droid</option>
+                     <option value="Weaker">Weaker Droid</option>
+                  </select>
+               </div>
+
+
 <!-- Daleks will always win because they are of course supreme, cybermen next, droids last in health and damage -->
 
 	<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
