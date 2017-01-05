@@ -43,3 +43,18 @@ function Droid() {
    this.attack += 10;
 };
 Droid.prototype = new Robot();
+
+// <!-- Each has 2 classes; dalek- cult of skaro or supreme council
+//      					cybermen; cyber leader or cyber soldier
+//      					probe droid; weak or even weaker -->
+// Each type must have a unique property/weapon using the math.random() function
+
+
+Battledome.Scarro = function (x) {
+	this.name = x;
+	this.type = "Scarro";
+	this.health = this.health += randomNum(20, 30);
+	this.attack = this.attack += randomNum(30, 50);
+	this.weapon = "Main Dalek Cannon";
+}
+Battledome.Scarro.prototype = new Dalek();
