@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="quiz.css">
 	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 </head>
+<article id="battle-container">
 <!-- Opening Screen/ welcome to the battle of the Baddies -->
   <section id="homeScreen">
          <a id="entry"><h1 class="text-center"><strong>Enter the Battle of the Baddies <br> </strong></h1></a>
@@ -16,7 +17,7 @@
 
 <section id="nameBots" class="row">
          <div>
-            <h1 class="text-center">Give Your Combatants Names</h1>
+            <h1 class="text-center">Name Your Combatants</h1>
             <hr>
             <div class="container row">
                <h2 class="col-md-4 col-md-offset-1">Combatant 1:<br>
@@ -69,6 +70,12 @@
                      <option value="Weaker">Weaker Droid</option>
                   </select>
                </div>
+                 <br>
+               <div class="text-center">
+                  <h2 id="showBot1Type">
+                  </h2>
+               </div>
+            </div>
 
 			<!-- robot 2 options -->
 
@@ -86,12 +93,46 @@
                      <option value="Weaker">Probe Droid</option>
                   </select>
                </div>
+                 <br>
+               <div class="text-center">
+                  <h2 id="showBot2Type">
+                  </h2>
+               </div>
+            </div>
 
-			<!-- maybe show the robot type that is selected -->
+<!--Link to battlefield-->
+
+         <div id="battleFieldLink" class="row">
+            <a class="col-md-4 col-md-offset-8" href="#">
+               <h3> To War! </h3></a>
+         </div>
+      </section>
+
+<!--  Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one. -->
+
+<section id="battleField">
+         <div class="text-center">
+            <button id="attack" type="button" class="btn btn-warning btn-lg">Exterminate!</button>
+         </div>
+         <div id="field" class="row container">
+            <div id="robot1stats" class="col-md-4 rounded-circle">
+
+            </div>
+
+            <div id="update" class="col-md-4">
+
+            </div>
+
+            <div id="robot2stats" class="col-md-4 rounded-circle">
+
+            </div>
+         </div>
+      </section>
+
+
 
 		<!-- 	Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one. -->
 
-		<button type="button" class="btn btn-warning space" id="startBattle" disabled>Click to Start Battle!</button>
 
 <!-- Daleks will always win because they are of course supreme, cybermen next, droids last in health and damage -->
 
