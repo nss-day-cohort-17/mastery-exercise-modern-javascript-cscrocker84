@@ -1,5 +1,38 @@
-/*styles for each of the pages
-styles for buttons
+body {
+	font-family: 'Impact', sans-serif;
+	color: indianred;
+}
+
+
+
+
+/*styles for each of the pages*/
+
+.homeScreen {
+   color: #ccc;
+   background-color: black;
+}
+.homeScreen h1 {
+   font-size: 5.5em;
+   margin-top: 220px;
+}
+
+
+/* styling for robot naming */
+
+.nameBots h1 {
+   margin-top: 100px;
+   font-size: 4em;
+}
+#selectBotLink {
+   margin-top: 80px;
+   background-color: red
+}
+.field__textinput {
+   color: silver;
+}
+
+
+/*styles for buttons
 maybe a background image or two
-background image at the end should be Daleks are Supreme
-*/
+background image at the end should be Daleks are Supreme*/
