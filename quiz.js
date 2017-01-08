@@ -1,6 +1,6 @@
 // create variables for robot 1 & 2
 // create variables for both robot names
-
+console.log("hello")
 
 let robot1;
 let robot2;
@@ -43,6 +43,36 @@ function activateEvents () {
       robot1 = new Battledome[z](robot1name);
       $('#showBot1Type').html(z);
    });
+
+ // proceed to battleField
+   $('#battleFieldLink').click( function() {
+      if ( robot1 === undefined || robot2 === undefined ) {
+         alert("mUsT sELecT rOboT tYpEs");
+      } else {
+         battleField();
+      }
+   });
+}
+
+// attack button
+   $('#attack').click( function() {
+      gamePlay();
+   });
+
+   // return to home screen on click
+   $('#playAgain').click(function () {
+      robot1 = undefined;
+      robot2 = undefined;
+      showHomeScreen();
+   });
+
+}
+
+activateEvents();
+
+//functions for each page to hide each one on the click and some timing to create an effect on page turn
+
+
 
 
 
