@@ -1,6 +1,7 @@
 body {
 	font-family: 'Impact', sans-serif;
-	color: indianred;
+	color: #ffff33;
+	background-image: url("http://www.walldevil.com/wallpapers/a59/801-wallpaper-doctor-details.jpg");
 }
 
 
@@ -22,10 +23,10 @@ body {
 
 .nameBots h1 {
    margin-top: 100px;
-   font-size: 4em;
+   font-size: 6em;
 }
 #selectBotLink {
-   margin-top: 80px;
+   margin-top: 100px;
    background-color: red
 }
 .field__textinput {
