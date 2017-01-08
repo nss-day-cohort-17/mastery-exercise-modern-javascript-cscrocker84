@@ -40,14 +40,14 @@ function activateEvents () {
     // generate robot2 to be displayed under the selection bar
       $('#select2').change( function(e) {
       let z = e.target.value
-      robot1 = new Battledome[z](robot1name);
-      $('#showBot1Type').html(z);
+      robot2 = new Battledome[z](robot2name);
+      $('#showBot2Type').html(z);
    });
 
  // proceed to battleField
    $('#battleFieldLink').click( function() {
       if ( robot1 === undefined || robot2 === undefined ) {
-         alert("mUsT sELecT rOboT tYpEs");
+         alert("You Will Identify Your Type or be Exterminated!");
       } else {
          battleField();
       }
@@ -66,13 +66,80 @@ function activateEvents () {
       showHomeScreen();
    });
 
-}
+
 
 activateEvents();
 
 //functions for each page to hide each one on the click and some timing to create an effect on page turn
+// clear all HTML elements on each "page turn"
+function reSet () {
+  $('section').addClass('hidden');
+}
+
+// show just the elements and styling of each "page"
+function showHomeScreen() {
+   reSet();
+   $('#homeScreen').fadeIn(3000).removeClass('hidden');
+   $('body').addClass('homeScreen');
+}
+
+function showNameBots() {
+   reSet();
+   $('#nameBots').removeClass('hidden');
+   $('body').addClass('nameBots');
+}
+
+function selectBots() {
+   reSet();
+   $('#selectBots').removeClass('hidden');
+   $('body').addClass('selectBots');
+   // populate given names above select tabs
+   $('#selectBot1').text($('#bot1name').val());
+   $('#selectBot2').text($('#bot2name').val());
+}
+
+function battleField() {
+   reSet();
+   $('#battleField').removeClass('hidden');
+   $('body').addClass('battleField');
+}
+
+function gameOver() {
+   reSet();
+   $('#gameOver').removeClass('hidden');
+   $('body').addClass('gameOver');
+}
 
 
+
+// ------- function for back-and-forth damage hits -------
+function gamePlay() {
+   damage1()
+   if (robot2.health <= 0) {
+      robot1wins();
+   } else {
+      setTimeout(damage2, 1000);
+   }
+   if (robot1.health <= 0) {
+      robot2wins();
+   }
+}
+
+
+// --------- functions for the two different outcomes ------
+function robot1wins() {
+   gameOver();
+   $('#outcome').html(`
+                  <h1>${robot1.name} defeated ${robot2.name} with ${robot1.weapon}</h1>
+                  `)
+}
+
+function robot2wins() {
+   gameOver();
+   $('#outcome').html(`
+                  <h1>${robot2.name} defeated ${robot1.name} with ${robot2.weapon}</h1>
+                  `)
+}
 
 
 
