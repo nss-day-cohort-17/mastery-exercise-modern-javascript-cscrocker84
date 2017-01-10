@@ -93,7 +93,7 @@ function selectBots() {
    reSet();
    $('#selectBots').removeClass('hidden');
    $('body').addClass('selectBots');
-   // populate given names above select tabs
+   // show given names above select tabs
    $('#selectBot1').text($('#bot1name').val());
    $('#selectBot2').text($('#bot2name').val());
 }
