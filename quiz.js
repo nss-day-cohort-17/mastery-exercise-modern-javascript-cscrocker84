@@ -1,6 +1,6 @@
 // create variables for robot 1 & 2
 // create variables for both robot names
-console.log("hello")
+
 
 let robot1;
 let robot2;
@@ -140,10 +140,3 @@ function robot2wins() {
                   <h1>${robot2.name} defeated ${robot1.name} with ${robot2.weapon}</h1>
                   `)
 }
-
-
-
-
-//effects on page change, maybe time delay or some type of card manipulation
-//functions for each page
-//functions for attack, registering damage, and determining the winner

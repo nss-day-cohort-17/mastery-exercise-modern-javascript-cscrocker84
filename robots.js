@@ -8,7 +8,7 @@
 //--- and another one will have a range of 60-120.
 //--- To accomplish this, read about the [Math.random()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function in JavaScript.
 // Give each robot model a different range of damage they do using the same technique.
-console.log("hello")
+
 let Battledome = {}
 
 // A base Robot function
