@@ -1,6 +1,6 @@
 body {
 	font-family: 'Impact', sans-serif;
-	color: #ffff33;
+	color: indianred;
 	background-image: url("http://www.walldevil.com/wallpapers/a59/801-wallpaper-doctor-details.jpg");
 }
 
@@ -10,7 +10,7 @@ body {
 /*styles for each of the pages*/
 
 .homeScreen {
-   color: #ccc;
+   color: #47d147;
    background-color: black;
 }
 .homeScreen h1 {
@@ -30,8 +30,13 @@ body {
    background-color: red
 }
 .field__textinput {
-   color: silver;
+   color: indianred;
 }
+
+#battleField {
+   color: #47d147;
+}
+
 
 
 /*styles for buttons
